@@ -24,7 +24,8 @@
 		<module>myegg-service</module>
 		<module>common-dal</module>
 		<module>myegg-model</module>
-	</modules>
+        <module>myegg-consumer-movie</module>
+    </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

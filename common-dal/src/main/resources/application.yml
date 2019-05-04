@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/myegg?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    url: jdbc:mysql://47.105.194.10:3306/myegg?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
-    password: myegg
+    password: Abc123!_
     driver-class-name: com.mysql.jdbc.Driver
 
 mybatis:

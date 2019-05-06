@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2018/11/18 0018.
  */
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserInfoController {
 

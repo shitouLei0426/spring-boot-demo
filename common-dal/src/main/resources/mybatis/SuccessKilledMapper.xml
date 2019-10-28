@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myegg.dao.mapper.SuccessKilledMapper">
+  <resultMap id="BaseResultMap" type="com.myegg.pojo.SuccessKilled">
+    <id column="seckill_id" jdbcType="BIGINT" property="seckillId" />
+    <id column="user_phone" jdbcType="BIGINT" property="userPhone" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modifier" jdbcType="TIMESTAMP" property="gmtModifier" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    seckill_id, user_phone, gmt_create, gmt_modifier, state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed (seckill_id, user_phone, gmt_create, 
+      gmt_modifier, state)
+    values (#{seckillId,jdbcType=BIGINT}, #{userPhone,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModifier,jdbcType=TIMESTAMP}, #{state,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        seckill_id,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        #{seckillId,jdbcType=BIGINT},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=BIGINT},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    <set>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+    </set>
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    set gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=TINYINT}
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.myegg.pojo.SuccessKilled">
+    <id column="seckill_id" jdbcType="BIGINT" property="seckillId" />
+    <id column="user_phone" jdbcType="BIGINT" property="userPhone" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modifier" jdbcType="TIMESTAMP" property="gmtModifier" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    seckill_id, user_phone, gmt_create, gmt_modifier, state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed (seckill_id, user_phone, gmt_create, 
+      gmt_modifier, state)
+    values (#{seckillId,jdbcType=BIGINT}, #{userPhone,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModifier,jdbcType=TIMESTAMP}, #{state,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        seckill_id,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        #{seckillId,jdbcType=BIGINT},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=BIGINT},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    <set>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+    </set>
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    set gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+      state = #{state,jdbcType=TINYINT}
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.myegg.pojo.SuccessKilled">
+    <id column="seckill_id" jdbcType="BIGINT" property="seckillId" />
+    <id column="user_phone" jdbcType="BIGINT" property="userPhone" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modifier" jdbcType="TIMESTAMP" property="gmtModifier" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    seckill_id, user_phone, gmt_create, gmt_modifier, state
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.myegg.pojo.SuccessKilledKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.myegg.pojo.SuccessKilledKey">
+    delete from success_killed
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed (seckill_id, user_phone, gmt_create, 
+      gmt_modifier, state)
+    values (#{seckillId,jdbcType=BIGINT}, #{userPhone,jdbcType=BIGINT}, CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP, #{state,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.myegg.pojo.SuccessKilled">
+    insert into success_killed
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        seckill_id,
+      </if>
+      <if test="userPhone != null">
+        user_phone,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="seckillId != null">
+        #{seckillId,jdbcType=BIGINT},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=BIGINT},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    <set>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModifier != null">
+        gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=TINYINT},
+      </if>
+    </set>
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    set
+      gmt_modifier = CURRENT_TIMESTAMP,
+      state = #{state,jdbcType=TINYINT}
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+      and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey2" parameterType="com.myegg.pojo.SuccessKilled">
+    update success_killed
+    set gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+    gmt_modifier = #{gmtModifier,jdbcType=TIMESTAMP},
+    state = #{state,jdbcType=TINYINT}
+    where seckill_id = #{seckillId,jdbcType=BIGINT}
+    and user_phone = #{userPhone,jdbcType=BIGINT}
+  </update>
+  <select id="queryByIdWithSeckill"  resultType="SuccessKilled">
+    select
+      sk.seckill_id,
+      sk.user_phone,
+      sk.state,
+      s.id "seckill.id",
+      s.name "seckill.name",
+      s.number "seckill.number",
+      s.start_time "seckill.startTime",
+      s.ent_time "seckill.endTime",
+      s.gmt_create "seckill.gmtCreate"
+    from
+    success_killed sk
+    inner join seckill s on sk.seckill_id = s.id
+    where seckill_id= #{seckillId}
+  </select>
+</mapper>
